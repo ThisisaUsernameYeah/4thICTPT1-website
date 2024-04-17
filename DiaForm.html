@@ -1,0 +1,270 @@
+<html>
+<head>
+    <style>
+        body {
+            font-size: 1em;
+            color: rgb(0, 0, 0);
+            background-image: linear-gradient(rgba(34, 32, 32, 0.7),#133ac6a7), url(Blue.jpg);
+            background-size: auto;
+        }
+
+        input {
+            width: 100px;
+            height: 30px
+        }
+
+        .contain, .contain2, .contain3, .contain4, .contain5, .contain6, .contain7, .contain8, .contain9, .contain10, .contain11, .contain12,
+        .contain13, .contain14, .contain15 {
+            background-color: white;
+            position: relative;
+            width: 60%;
+            height: auto;
+            padding: 50px;
+            border-radius: 30px;
+            align-items: center;
+        }
+
+        body {
+            font-size: 25px;
+            align-items: center;
+        }
+
+        input::placeholder {
+            color: rgb(31, 80, 227);
+        }
+
+        textarea::placeholder {
+            color: rgb(10, 180, 237);
+        }
+
+        textarea {
+            width: 100%;
+            outline: 0;
+            border: 1px solid #0055ff;
+            background: transparent;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <script async defer>
+        console.log("Reached")
+
+        function One() {
+            console.log("Reached2")
+
+            let q1 = document.querySelector("input[name='radio0']:checked").value
+            let q2 = document.getElementById("TA1").value
+            let q3 = document.querySelector("input[name='radio']:checked").value
+            let q4 = document.getElementById("TA2").value
+            let q5 = document.querySelector("input[name='radio2']:checked").value
+            let q6 = document.querySelector("input[name='radio3']:checked").value
+            let q7 = document.getElementById("TA3").value
+            let q8 = document.querySelector("input[name='radio4']:checked").value
+            let q9 = document.querySelector("input[name='radio5']:checked").value
+            let q10 = document.getElementById("TA4").value
+            let q11 = document.getElementById("TA5").value
+            let q12 = document.querySelector("input[name='radio6']:checked").value
+            let q13 = document.querySelector("input[name='radio7']:checked").value
+            let q14 = document.getElementById("TA6").value
+            let q15 = document.querySelector("input[name='radio8']:checked").value
+
+
+            localStorage.setItem("ShortenedDays", q1)
+            localStorage.setItem("ReasonsForQuestion1", q2)
+            localStorage.setItem("CatchUpFridays", q3)
+            localStorage.setItem("OwnSolution", q4)
+            localStorage.setItem("JeepneyModernization", q5)
+            localStorage.setItem("KilluaCaseAnimalCruelty", q6)
+            localStorage.setItem("OpinionsRegardingAnimalCruelty", q7)
+            localStorage.setItem("CriminalLiability", q8)
+            localStorage.setItem("RadioGatewayDrugs", q9)
+            localStorage.setItem("GatewayDrugsCuriosity", q10)
+            localStorage.setItem("PeerPressureGatewayDrugs", q11)
+            localStorage.setItem("Summer", q12)
+            localStorage.setItem("Uniform", q13)
+            localStorage.setItem("UniformReasons", q14)
+            localStorage.setItem("You", q15)
+        }
+    </script>
+
+    <form onsubmit="return false">
+
+        <center>
+            <br>
+            <div class="contain">
+                Are you in favor with the shortened days within
+                the school year?
+                <br>
+                <br>
+                <input type="radio" required placeholder="Agree" name="radio0" value="Agreed">Agree
+                <input type="radio" required placeholder="Disagree" name="radio0" value="Disagreed">Disagree
+            </div>
+            <br>
+            <br>
+            <div class="contain2">
+                If so, give me reason/s (from question 1):
+                <br>
+                <br>
+                <textarea placeholder="Type your answer here." rows="6" cols="50" required id="TA1" name="ReasonsForQuestion1"></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="contain3">
+                Does the Catch-up Fridays program help
+                you when it comes to reading comprehension?
+                <br>
+                <br>
+                <input type="radio" required placeholder="Yes" name="radio" value="Yes">Yes
+                <input type="radio" required placeholder="No" name="radio" value="No">No
+                <input type="radio" required placeholder="Maybe" name="radio" value="Maybe">Maybe
+                <input type="radio" required placeholder="Cannot be determined yet" name="radio" value="Cannot be determined yet">Cannot be determined yet
+            </div>
+            <br>
+            <br>
+            <div class="contain4">
+                If you were to make a solution or
+                program that can solve/answer the problem regarding the reading
+                comprehension among Filipino students that you think will lead to a great result,
+                what would it be?:
+                <br>
+                <br>
+                <textarea placeholder="Type your answer here." rows="6" cols="50" required id="TA2" name="OwnSolution"></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="contain5">
+                Do you think that it was a great idea
+                to mandatorily modernize the traditional jeepneys that've been
+                part of our
+                culture/tradition:
+                <br>
+                <br>
+                <input type="radio" required placeholder="Of course" name="radio2" value="Of course">Of course
+                <input type="radio" required placeholder="Hell no" name="radio2" value="A big NO">A big NO
+            </div>
+            <br>
+            <br>
+            <div class="contain6">
+                What did you feel when you saw the case of
+                Killua (a golden retriever (breed of a dog) that was mercilessly
+                killed by a man)?:
+                <br>
+                <br>
+                <img src="Happy.jpg" width="100" height="100">
+                <input type="radio" required placeholder="Happy" name="radio3" value="Happy">Happy
+                <img src="Angry.jpg" width="100" height="100">
+                <input type="radio" required placeholder="Angry" name="radio3" value="Angry">Angry
+                <br>
+                <img src="Disappointed.jpg" width="100" height="100">
+                <input type="radio" required placeholder="Disappointed" name="radio3" value="Disappointed">Disappointed
+                <img src="Shocked.jpg" width="100" height="100">
+                <input type="radio" required placeholder="Shocked" name="radio3" value="Shocked">Shocked
+            </div>
+            <br>
+            <br>
+            <div class="contain7">
+                In your opinion, how can we gradually end
+                the animal cruelty here in the country that has been going
+                on for so many years now and is normalized by many?:
+                <br>
+                <br>
+                <textarea placeholder="Type your answer here." rows="6" cols="50" required id="TA3" name="OpinionsRegardingAnimalCruelty"></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="contain8">
+                Should people under 18 year old be
+                accountable for the crimes that they've committed?
+                <br>
+                <br>
+                <input type="radio" required placeholder="Yes, they should be." name="radio4" value="Should be">Yes, they should be.
+                <input type="radio" required placeholder="No, they shouldn't." name="radio4" value="Shouldn’t">No, they shouldn't.
+                <br>
+                <input type="radio" required placeholder="Yes, but when they turned 18." name="radio4" value="Turned 18">Yes,
+                but when they turned 18.
+                <input type="radio" required placeholder="No, their parents are rsponsiblle for that." name="radio4" value="No, parents are responsible">No,
+                their parents are responsible for that.
+            </div>
+            <br>
+            <br>
+            <div class="contain9">
+                Have you ever encountered someone who used gateway drugs?
+                <br>
+                <br>
+                <input type="radio" required placeholder="Yeah" name="radio5" value="Yeah">Yeah
+                <input type="radio" required placeholder="Nah" name="radio5" value="Nah">Nah
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+            <div class="contain10">
+                What are the signs of someone being addicted to gateway drugs?
+                <br>
+                <br>
+                <textarea placeholder="Type your answer here." rows="6" cols="50" required id="TA4" name="GatewayDrugsCuriosity"></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="contain11">
+                If your peers pressure you to try gateway drugs, what would you do?
+                <br>
+                <br>
+                <textarea placeholder="Type your answer here." rows="6" cols="50" required id="TA5" name="PeerPressureGatewayDrugs"></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="contain12">
+                What do you typically do during the summer?
+                <br>
+                <br>
+                <input type="radio" required placeholder="Go on vacation" name="radio6" value="Vacation">Go on vacation
+                <input type="radio" required placeholder="Stay in my room and use the air conditioner" name="radio6" value="MyRoom">Stay in my room and use the air conditioner
+                <br>
+                <input type="radio" required placeholder="Go to the mall" name="radio6" value="Mall">Go to the mall
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+            <div class="contain13">
+                Which do you prefer: PE uniform or school uniform?
+                <br>
+                <br>
+                <input type="radio" required placeholder="PE Uniform" name="radio7" value="PEUni">PE Uniform
+                <input type="radio" required placeholder="School Uniform" name="radio7" value="SchoolUni">School Uniform
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+            <div class="contain14">
+                Why did you choose PE Uniform than School Uniform, or vice versa?
+                <br>
+                <br>
+                <textarea placeholder="Type your answer here." rows="6" cols="50" required id="TA6" name="UniformReasons"></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="contain15">
+                Lastly, how are you?
+                <br>
+                <br>
+                <input type="radio" required placeholder="Doing well" name="radio8" value="Well">Doing well
+                <input type="radio" required placeholder="Fine" name="radio8" value="Fineeee">Fine
+                <input type="radio" required placeholder="Drained/Tired" name="radio8" value="Drained">Drained/Tired
+                <input type="radio" required placeholder="Fighting!" name="radio8" value="Fighting">Fighting!
+                <br>
+                <br>
+            </div>
+            <br>
+            <button type="submit" onclick="One()">Submit</button>
+
+        </center>
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<html>
+<head>
+
+    <title>
+        Homepage
+    </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box
+        }
+
+        .home {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(34, 32, 32, 0.7),#1f3892), url(MountainView.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        form {
+            width: 90%;
+            max-width: 600px
+        }
+
+        #firstName {
+            width: 50%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        #middleName {
+            width: 50%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        #lastName {
+            width: 50%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        #Nickname {
+            width: 50%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        #Address {
+            width: 50%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        .radio {
+            display: inline-flex;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+            margin-bottom: 5%;
+            margin-top: 5%
+        }
+
+        .radio__input {
+            display: none
+        }
+
+        .radio__label {
+            padding: 8px 14px;
+            font-size: 14px;
+            font-family: sans-serif;
+            color: #ffff;
+            background: #5985ff;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+
+            .radio__label:not(:last-of-type) {
+                border-right: 1px solid #5985ff;
+            }
+
+        .radio__input:checked + .radio__label {
+            background: #3659b9
+        }
+
+        .gnder {
+            color: #fff;
+            cursor: text
+        }
+
+        input {
+            width: 300px;
+            height: 50px;
+            background: transparent: outline: none;
+            border: 2px solid #0f0;
+            border-radius: 5px;
+            padding;
+            0 0 15px;
+            box-shadow: #0f0, inset 0 o 10px #0f0;
+            color: #0f0;
+            font-size: 16px
+        }
+
+            input::placeholder {
+                color: #fff
+            }
+
+        textarea::placeholder {
+            color: #fff;
+        }
+
+        ::-ms-input-placeholder {
+            color: #fff;
+        }
+
+
+        h1 {
+            background-color: #3659b9;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 2px;
+            padding: 4px;
+            text-align: left;
+        }
+
+        #link a {
+            font-size: 1.3em;
+            text-decoration: none;
+            color: #fff;
+            background-color: #5985ff;
+        }
+
+        #link {
+            position: relative;
+        }
+
+        #button {
+            position: relative;
+            background-color: #ffffff;
+            color: #00aaff;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <script async defer>
+        console.log("Reached")
+
+        function One() {
+            console.log("Reached2")
+
+
+
+            let x1 = document.getElementById("firstName").value
+            let x2 = document.getElementById("middleName").value
+            let x3 = document.getElementById("lastName").value
+            let x4 = document.getElementById("Nickname").value
+            let x5 = document.querySelector("input[name='gender']:checked").value
+            let x6 = document.getElementById("Address").value
+            let x7 = document.getElementById("Motto").value
+
+
+            localStorage.setItem("FirstName", x1)
+            localStorage.setItem("MiddleName", x2)
+            localStorage.setItem("LastName", x3)
+            localStorage.setItem("Nickname", x4)
+            localStorage.setItem("Gender", x5)
+            localStorage.setItem("Address", x6)
+            localStorage.setItem("Motto", x7)
+        }
+
+    </script>
+
+
+    <h1>Welcome, user!</h1>
+    <div class="home">
+
+
+        <form onsubmit="return false">
+
+            <div class="input.group">
+
+
+                <div class="row">
+
+                    <input type="text" id="firstName" required placeholder="First Name" name="FN">
+                    <i class='bx bx-user'></i>
+
+                </div>
+                <br>
+
+                <div class="input.group">
+
+                    <input type="text" id="middleName" required placeholder="Middle Name" name="MN">
+                    <i class='bx bx-user'></i>
+
+                </div>
+                <br>
+
+                <div class="input.group">
+
+                    <input type="text" id="lastName" required placeholder="Last Name" name="LN">
+                    <i class='bx bx-user'></i>
+
+                </div>
+            </div>
+            <br>
+
+            <div class="input.group">
+
+                <input type="text" id="Nickname" required placeholder="Nickname" name="NN">
+                <i class='bx bx-group'></i>
+
+            </div>
+
+            <label for="radio" class="gnder">Gender:</label>
+            <div class="radio">
+
+                <input class="radio__input" type="radio" name="gender" id="option1" required>
+                <label class="radio__label" for="option1">Male</label>
+
+                <input class="radio__input" type="radio" name="gender" id="option2" required>
+                <label class="radio__label" for="option2">Female</label>
+
+                <input class="radio__input" type="radio" name="gender" id="option3" required>
+                <label class="radio__label" for="option3">Others</label>
+
+                <input class="radio__input" type="radio" name="gender" id="option4" required>
+                <label class="radio__label" for="option4">Rather not say</label>
+            </div>
+
+
+            <br>
+
+            <div class="input.group">
+
+                <input type="text" id="Address" required placeholder="Address" name="Add">
+                <i class='bx bx-home'></i>
+
+            </div>
+            <br>
+            <div class="input.group">
+                <textarea id="Motto" placeholder="Type your Motto in life..." rows="4 cols="40" name="Mtt"></textarea>
+
+            </div>
+            <br>
+            <br>
+            <center>
+                <button type="submit" id="button" onclick="One()">Submit</button>
+                <br>
+                <br>
+                <button id="link"><a href="DiaForm.html">Next page>></a></button>
+            </center>
+            <br>
+            <br>
+        </form>
+</body>
+</html>
